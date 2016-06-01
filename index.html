@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Look at us!</title>
+	
+	
+	<style>
+		body {
+			padding: 0px;
+			margin: 0px;
+			height: 100vh;
+			overflow: hidden;
+			background: tomato;
+
+		}
+
+		.left-img {
+			width: 50%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			position: absolute;
+			z-index: 100;
+			background-color: pink;
+		}
+
+		.right-img {
+			width: 50%;
+			height: 100%;
+			right: 0px;
+			top: 0px;
+			position: absolute;
+			z-index: 100;
+			background-color: hotpink;
+		}
+
+		.alien {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background: url("http://www.history.co.uk/sites/default/files/images/episode_guide/alien-files-unsealed-s3.jpg");
+			background-size: cover;
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="alien">
+		<!-- <img src="" alt=""> -->
+	</div>
+
+	<div class="left-img">
+		<img src="" alt="">
+	</div>
+
+	<div class="right-img">
+		<img src="" alt="">
+	</div>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   
+    
+    <script>
+
+        $(document).ready(function() {
+        	$('.left-img, .right-img').click(function(){
+        		$('.left-img').animate({"left": "-1200px"}, 2000);
+        		$('.right-img').animate({"right": "-1200px"}, 2000);
+    		});
+ 
+        	$('.alien').click(function(){
+        		$('.left-img').animate({"left": "0px"}, 1000);
+        		$('.right-img').animate({"right": "0px"}, 1000);
+    		});
+
+
+    	});
+    </script>
+</body>
+</html>
+
+
+
