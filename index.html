@@ -22,7 +22,7 @@
 			left: 0px;
 			position: absolute;
 			z-index: 100;
-			background-color: pink;
+			background-color: black;
 		}
 
 		.right-img {
@@ -32,7 +32,7 @@
 			top: 0px;
 			position: absolute;
 			z-index: 100;
-			background-color: hotpink;
+			background-color: black;
 		}
 
 		.alien {
@@ -45,25 +45,44 @@
 			background-size: cover;
 		}
 
+		img{
+			max-width: 100%;
+		}
 
+		.ufo {
+			position: absolute;
+			left: 20px;
+			top: 80px;
+			-webkit-animation: ufoMove 3s linear infinite;
+		}
 
+		@-webkit-keyframes ufoMove {
+		  0%   {left: 20px; }
+		  50%  {left: 1000px; }
+		  100% {left: 20px; }
+		}
+
+		
 
 
 	</style>
 </head>
 <body>
-
+    
 	<div class="alien">
-		<!-- <img src="" alt=""> -->
+		<img class="people" src="img/aliens.png" alt="">
+
+		<img class="ufo" src="img/ufo.png" alt="">
+		
 	</div>
 
-	<div class="left-img">
-		<img src="" alt="">
+	<!-- <div class="left-img">
+		<img src="img/left.jpg" alt="">
 	</div>
 
 	<div class="right-img">
-		<img src="" alt="">
-	</div>
+		<img src="img/right.jpg" alt="">
+	</div> -->
 	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    
