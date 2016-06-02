@@ -6,11 +6,6 @@
 	
 	
 	<style>
-	
-		audio { 
-   			display:none;
-		}
-		
 		body {
 			padding: 0px;
 			margin: 0px;
@@ -27,8 +22,10 @@
 			left: 0px;
 			position: absolute;
 			z-index: 100;
-			background-color: black;
+			background-color: white;
 		}
+
+
 
 		.right-img {
 			width: 50%;
@@ -37,7 +34,7 @@
 			top: 0px;
 			position: absolute;
 			z-index: 100;
-			background-color: black;
+			background-color: white;
 		}
 
 		.alien {
@@ -67,8 +64,16 @@
 		  100% {left: 20px; }
 		}
 
-		
+        @-webkit-keyframes redBK {
+          0%   {background-color: white; }
+          50%  {background-color: red; }
+          100% {background-color: white;}
+        }
 
+        .red {
+          -webkit-animation: redBK .5s linear infinite;
+        }
+        
 
 	</style>
 </head>
@@ -82,17 +87,13 @@
 	</div>
 
 	<div class="left-img">
-		<img src="img/left.jpg" alt="">
+		<img src="img/left.png" alt="">
+		
 	</div>
 
 	<div class="right-img">
-		<img src="img/right.jpg" alt="">
+		<img src="img/right.png" alt="">
 	</div>
-	
-	
-	<audio controls autoplay>
-  		<source src="siren.mp3" type="audio/mp3">
-	</audio>
 	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    
@@ -108,6 +109,11 @@
         	$('.alien').click(function(){
         		$('.left-img').animate({"left": "0px"}, 1000);
         		$('.right-img').animate({"right": "0px"}, 1000);
+    		});
+
+    		$(window).hover(
+    		      function () {
+    		        $('.left-img, .right-img').addClass('red');
     		});
 
 
